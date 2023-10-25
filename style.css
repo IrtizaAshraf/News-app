@@ -32,3 +32,47 @@ body{
 #single-box img {
       width: 100%;
 }
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+Collegiate+One:ital@1&family=Lilita+One&family=Merriweather:ital,wght@1,700&family=Pixelify+Sans&family=Reem+Kufi+Fun&family=Roboto+Slab&family=Roboto:wght@100&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+Collegiate+One:ital@1&family=Lilita+One&family=Lora&family=Merriweather:ital,wght@1,700&family=Pixelify+Sans&family=Reem+Kufi+Fun&family=Roboto+Slab&family=Roboto:wght@100&family=Young+Serif&display=swap');
+#single-box p {
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Young+Serif&display=swap';
+}
+
+#single-box h4 {
+      color: rgb(163, 255, 235);
+      font-size: 30px;
+      font-weight: 600;
+      font-family: 'Young+Serif&display=swap';
+}
+
+#single-box h1 {
+      color: rgb(0, 0, 0);
+      font-size: 38px;
+      font-weight: 800;
+      font-family: 'Young+Serif&display=swap';
+      text-decoration: underline;
+}
+
+
+.more {
+      color: rgb(29, 182, 233);
+      font-size: 25px;
+      font-weight: 800;
+      font-family: 'Young+Serif&display=swap';
+      text-decoration: underline;
+      padding: 10px 20px 10px 20px ;
+      background-color: blueviolet;
+}
+
+
+:hover.more{
+      color: rgb(47, 159, 196);
+      font-size: 25px;
+      font-weight: 800;
+      font-family: 'Young+Serif&display=swap';
+      text-decoration: underline;
+      padding: 10px 20px 10px 20px ;
+      background-color: rgb(57, 11, 100);
+}

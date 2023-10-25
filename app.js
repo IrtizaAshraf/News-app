@@ -202,12 +202,65 @@ search.addEventListener('submit', async (e) => {
     }
 });
 
-function MoreData(i) {
-    let oneNews = allNews[i];
-    console.log(oneNews);
+// function MoreData(i) {
+//     let oneNews = allNews[i];
+//     console.log(oneNews);
 
-    const newss = JSON.stringify(oneNews);
-    localStorage.setItem('new', newss);
+//     const newss = JSON.stringify(oneNews);
+//     localStorage.setItem('new', newss);
+
+//     window.location = 'news.html';
+// }
+
+
+
+// window.onbeforeunload = function () {
+//     localStorage.setItem('new', JSON.stringify(oneNews));
+// };
+
+// function MoreData(i) {
+//     let oneNews = allNews[i];
+//     console.log(oneNews);
+
+//     const newss = JSON.stringify(oneNews);
+//     sessionStorage.setItem('new', newss); // Use sessionStorage instead of localStorage
+
+//     window.location = 'news.html';
+// }
+
+
+function MoreData(i) {
+    // Check if data exists in localStorage
+    const storedData = sessionStorage.getItem('new');
+
+    if (storedData) {
+        // Use the existing data from localStorage
+        const moreinfo = JSON.parse(storedData);
+        displayNews(moreinfo);
+    } else {
+        // If data doesn't exist in localStorage, fetch it and store in localStorage
+        let oneNews = allNews[i];
+        console.log(oneNews);
+
+        const newss = JSON.stringify(oneNews);
+        sessionStorage.setItem('new', newss);
+
+        displayNews(oneNews);
+    }
 
     window.location = 'news.html';
+}
+
+function displayNews(moreinfo) {
+    const newsBox = document.querySelector('.morenews');
+    newsBox.innerHTML = `
+        <div id="single-box">
+            <img src="${moreinfo.urlToImage}" alt="">
+            <h1>${moreinfo.title}</h1>
+            <p id="publish-date">Published at: ${moreinfo.publishedAt}</p>
+            <h4>${moreinfo.description}</h4>
+            <p>${moreinfo.content}</p>
+            <a href="${moreinfo.url}">Read Complete News</a>
+        </div>
+    `;
 }
