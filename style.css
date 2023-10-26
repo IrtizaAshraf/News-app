@@ -84,7 +84,7 @@ body{
       padding: 70px 0;
       display: flex;
       justify-content: space-evenly;
-      background-color: #1595df;
+      background-color: #0724a8;
 }
 
 
@@ -108,7 +108,7 @@ body{
 }
 
 footer {
-      background-color: #2485f5;
+      background-color: #0a40d7;
       border-top: 1px solid #280ba9;
       font-size: 17px;
       padding: 15px 5px;
